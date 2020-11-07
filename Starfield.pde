@@ -39,14 +39,17 @@ class OddBallParticle extends Particle
   }
   void move()
   {
-    myX = myX + 25;
-    myY = myY + 25;
-}
+    myX = myX + (int)(Math.random()*3)-1;
+    myY = myY + (int)(Math.random()*3)-1;
+    if(myY < -100){
+    myY = 500;
+  }
+  }
   void show()
   {
   fill(102, 0, 153);
   noStroke();
-  ellipse(200, 200, 25, 25);
+  ellipse(myY, myX, mySize, mySize);
   }
 }
 
