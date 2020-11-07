@@ -33,14 +33,14 @@ class OddBallParticle extends Particle
   {
   myX = myY = 200;
   myAngle = Math.random()*2*Math.PI;
-  mySpeed = Math.random()*10;
+  mySpeed = Math.random()*5;
   mySize = 20;
   myColor = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
   }
   void move()
   {
-    myX = myX + (int)(Math.random()*3)-1;
-    myY = myY + (int)(Math.random()*3)-1;
+    myX = myX + (int)(Math.random()*2)-1;
+    myY = myY + (int)(Math.random()*2)-1;
     if(myY < -100){
     myY = 500;
   }
